@@ -5,7 +5,6 @@ classDiagram
         -instance Application$
         +login(String username, String password)
         +getCurrentUser() User
-        +getIncidents() Collection~Incident~
     }
     class User{
         +getName() String
@@ -25,8 +24,10 @@ classDiagram
     User *-- UserRole : role
 
     class Incident {
-        -String description     
+        -String description
+        +addTask()    
         +resolve()
+        +reopen()
         +updateDescription(String newDesc)
     }
     class Task{
@@ -55,5 +56,4 @@ classDiagram
     Incident *-- IncidentStatus : status
     Task *-- TaskStatus : status
     Task  o-- "0..1" User : assignedUser
-    Application  o-- "0..n" Incident : incidents
 ```

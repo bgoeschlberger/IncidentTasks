@@ -2,6 +2,8 @@
 
 The IncidentTasks application is a small example sketching the implementation of the user stories described in the following section.
 
+# Requirements
+
 ## User Stories (simplified)
 
 ### Create Incidents
@@ -46,3 +48,9 @@ Task Status:
 * Task status can be changed from *OPEN* or *IN_PROGRESS* to *REQUIRES_CLARIFICATION* by the assigned user
 * Task status can not be reset to *OPEN* by the assgined user
 * An *incident response manager* can set the status of a task to any state
+
+# Design 
+
+## Architecture and Data Model
+ 
+[Class Diagram](./classDiagram.md)

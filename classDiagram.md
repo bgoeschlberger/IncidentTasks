@@ -1,16 +1,32 @@
 ```mermaid
 classDiagram
+    class Application{
+        +getInstance() Application$
+        -instance Application$
+        +getCurrentUser() User
+        +getIncidents() Collection~Incident~
+    }
+    class User{
+        +getName() String
+        +getRole() UserRole
+        -String username
+        -UserRole role
+    }
+
+    Application o-- User : currentUser
+
     class Incident {
-        -IncidentStatus status
-        -Collection~Task~ tasks     
+        -String description     
         +resolve()
+        +updateDescription(String newDesc)
     }
     class Task{
-        -TaskStatus status
-        -User assignedUser
+        -String description
         +assignUser(User u)
-        +start()
-        +finish()
+        +updateDescription(String newDesc)
+        +startWorking()
+        +finishTask()
+        +setToRequiresClarification()
     }
 
     class IncidentStatus {
@@ -25,7 +41,9 @@ classDiagram
         RESOLVED
     }
 
-    Incident "0" --> "n" Task
-    Incident *-- IncidentStatus
-    Task *-- TaskStatus
+    Incident o-- "0..n" Task : associatedTasks
+    Incident *-- IncidentStatus : status
+    Task *-- TaskStatus : status
+    Task  o-- "0..1" User : assignedUser
+    Application  o-- "0..n" Incident : incidents
 ```

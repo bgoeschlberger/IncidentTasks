@@ -3,6 +3,7 @@ classDiagram
     class Application{
         +getInstance() Application$
         -instance Application$
+        +login(String username, String password)
         +getCurrentUser() User
         +getIncidents() Collection~Incident~
     }
@@ -10,10 +11,18 @@ classDiagram
         +getName() String
         +getRole() UserRole
         -String username
-        -UserRole role
+    }
+    class UserRole{
+        <<enumeration>>
+        UNREGISTERED
+        REGISTERED
+        RESPONSE_AGENT
+        RESPONSE_MANAGER
+        ADMIN
     }
 
     Application o-- User : currentUser
+    User *-- UserRole : role
 
     class Incident {
         -String description     
@@ -38,6 +47,7 @@ classDiagram
         <<enumeration>>
         OPEN
         IN_PROGRESS
+        REQUIRES_CLARIFICATION
         RESOLVED
     }
 

@@ -8,7 +8,7 @@ The IncidentTasks application is a small example sketching the implementation of
 
 ### Create Incidents
 
-As a *registered user* I want to *create an Incident* describing a situation that I need assistance with to raise awareness for it.
+* As a *registered user* I want to *create an Incident* describing a situation that I need assistance with to raise awareness for it.
 
 #### Acceptance Criteria
 
@@ -18,23 +18,23 @@ As a *registered user* I want to *create an Incident* describing a situation tha
 
 ### Creating Tasks
 
-As *incident response manager* I want to *create tasks* that express the required actions that need to be performed to resolve an incident. 
-As *incident manager* I want to *assign responsible response agents to new tasks* so that planned tasks get executed by the responsible agents.   
+* As *incident response manager* I want to *create tasks* that express the required actions that need to be performed to resolve an incident. 
+* As *incident manager* I want to *assign responsible response agents to new tasks* so that planned tasks get executed by the responsible agents.   
 
 #### Acceptance Criteria
 
 * New tasks can be created by users with the privilege *incident response manager*
 * Tasks are assigned to an incident
 * New tasks have a status of *OPEN*
-* Tasks contain a description of the required actions to be taken
-* Tasks contain an *assigned User*
+* Tasks contain a description of the required actions to be taken (which should not be empty)
+* Tasks contain an *assigned User* (which can be empty)
 
 
 ### Tracking Incident and Task Status
 
-As *incident response manager* I want to *manage the status of incidents*, so I can set resolved issues to *RESOLVED*.
-As *assigned response agent* I want to *update the task status* to reflect my progress on the task.
-As *assigned response agent* I want to *communicate that a task is unclear or that I need assistance with a task* to the *incident response manager*.
+* As *incident response manager* I want to *manage the status of incidents*, so I can set resolved issues to *RESOLVED*.
+* As *assigned response agent* I want to *update the task status* to reflect my progress on the task.
+* As *assigned response agent* I want to *communicate that a task is unclear or that I need assistance with a task* to the *incident response manager*.
 
 #### Acceptance Criteria
 

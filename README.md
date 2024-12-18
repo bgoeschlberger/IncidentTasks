@@ -46,7 +46,7 @@ Task Status:
 * Task status can be changed from *OPEN* or *REQUIRES_CLARIFICATION* to *IN_PROGRESS* by the assigned user
 * Task status can be changed from *IN_PROGRESS* to *RESOLVED* by the assigned user
 * Task status can be changed from *OPEN* or *IN_PROGRESS* to *REQUIRES_CLARIFICATION* by the assigned user
-* Task status can not be reset to *OPEN* by the assgined user
+* Task status can not be reset to *OPEN* by the assigned user
 * An *incident response manager* can set the status of a task to any state
 
 # Design 

@@ -53,4 +53,4 @@ Task Status:
 
 ## Architecture and Data Model
  
-[Class Diagram](./classDiagram.md)
+For an overview look at the [Class Diagram](./classDiagram.md)
